@@ -1,0 +1,14 @@
+<div class="col-md-6 mx-auto">
+  <h2>Posts</h2>
+  <div>
+    <div class="card mb-3" *ngFor="let post of posts">
+      <div class="Card-body p-3">
+        <h3 class="card-title">{{ post.title | titlecase }}</h3>
+        <p class="card-text">{{ post.body }}...</p>
+      </div>
+      <div class="card-footer bg-light text-right">
+        <a class="text-primary" [routerLink]="['/postdetail', post.id]">Read more <i class="fa fa-arrow-circle-right"></i></a>
+      </div>
+    </div>
+  </div>
+</div>

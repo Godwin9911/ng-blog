@@ -1,0 +1,18 @@
+<div class="container">
+    <h2>Profiles</h2>
+    <p class="text-secondary">Connect with Your Favourite Bloggers</p>
+    <div class="row">
+        <div class="card card-body text-center p-4 col-md-3 m-4" *ngFor="let user of users">
+          <h3 class="text-primary">{{user.name}}</h3>
+          <p class="text-secondary">@{{ user.username }}</p>
+          <p><i  class="fa fa-map-marker"></i> {{user.address.street}},<br> {{user.address.city}}</p>
+          <div class="m-2 ">
+            <i class="fa fa-envelope fa-2x m-2"></i>
+            <i class="fa fa-phone fa-2x m-2"></i>
+            <i class="fa fa-globe fa-2x m-2"></i>
+          </div>
+          <button class="btn btn-outline-primary"
+          [routerLink]="['/profile', user.id]">View Profile</button>
+        </div>
+    </div>
+</div>

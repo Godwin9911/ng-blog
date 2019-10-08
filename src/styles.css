@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootswatch/dist/journal/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+
+agm-map {
+  height: 300px;
+}

@@ -1,0 +1,24 @@
+<div class="col-md-6 mx-auto mt-4">
+    <div>
+      <div class="mb-3">
+        <div class="Card-body">
+          <h2 class="card-title">{{ post.title | titlecase }}</h2>
+          <p class="card-text">{{ post.body }} Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum atque vitae recusandae aliquam eaque vero non Voluptates non aspernatur repellendus rerum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aut ut expedita accusantium quis reprehenderit, amet aspernatur impedit possimus aliquid tempore nobis, debitis eligendi. Quidem numquam ipsam similique tenetur vero.</p>
+        </div>
+        <div>
+          <button class="btn btn-outline-primary m-2 mt-4" (click)="getComments()"><i class="fa fa-comments"></i> View Comments</button>
+          <hr>
+          <h3 *ngIf="comments">{{ comments?.length || '' }} Comments</h3>
+          <div class="card border bg-light mb-3" *ngFor="let comment of comments">
+            <div class="card-body">
+              <h4 class="card-title"></h4>
+              <p class="card-text">{{ comment.body }}</p>
+            </div>
+            <div class="card-footer text-right">
+            {{ comment.name }} <i class="fa fa-user-circle"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
