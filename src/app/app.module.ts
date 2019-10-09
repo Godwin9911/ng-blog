@@ -16,8 +16,8 @@ import { UsersComponent } from './users/users.component';
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      { path: 'profiles', component: UsersComponent },
-      { path: '', redirectTo: 'profiles', pathMatch: 'full' },
+      { path: '', component: UsersComponent },
+      { path: 'profiles', redirectTo: 'profiles', pathMatch: 'full' },
       { path: '**', component: UsersComponent }
     ], {scrollPositionRestoration: 'enabled'}),
     UsersModule,
